@@ -35,6 +35,7 @@ const quickLinks = [
   { label: "Comment Jouer", href: "#comment-jouer" },
   { label: "Gains", href: "#gains" },
   { label: "FAQ", href: "#faq" },
+  { label: "Gagnants", href: "/gagnants" },
 ];
 
 // ===========================
