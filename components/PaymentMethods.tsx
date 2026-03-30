@@ -90,7 +90,7 @@ export default function PaymentMethods() {
                     p-5 md:p-6
                     border-2 border-gray-100
                     ${payment.borderColor}
-                    hover:shadow-lg
+                    
                     transition-all duration-300
                     flex items-center gap-5
                     group

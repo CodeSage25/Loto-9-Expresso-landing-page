@@ -110,7 +110,6 @@ export default function GainsTable() {
                 relative rounded-2xl overflow-hidden
                 border-2 ${gain.borderColor}
                 transition-all duration-300
-                hover:-translate-y-2 hover:shadow-xl
                 group
               `}
             >
@@ -195,7 +194,7 @@ export default function GainsTable() {
               </div>
               <div className="mt-1 inline-flex items-center gap-1 bg-primary-dark text-gold px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                 <Zap size={12} />
-                Jackpot Maximum
+                Jackpot
               </div>
             </div>
 

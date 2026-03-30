@@ -15,14 +15,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LOTO 9 EXPRESS — Gagnez jusqu'à 1 000 000 F CFA | IziLoto.cm",
+  title: "LOTO 9 EXPRESS0 — Gagnez jusqu'à 1 000 000 F CFA | IziLoto.cm",
   description:
-    "Jouez au LOTO 9 EXPRESS sur IziLoto.cm. Choisissez 9 numéros, misez à partir de 100 F CFA et gagnez jusqu'à 1 000 000 F CFA toutes les 2 minutes. Disponible au Cameroun via MTN Mobile Money et Orange Money.",
+    "Jouez au LOTO 9 EXPRESS0 sur IziLoto.cm. Choisissez 9 numéros, misez à partir de 100 F CFA et gagnez jusqu'à 1 000 000 F CFA toutes les 2 minutes. Disponible au Cameroun via MTN Mobile Money et Orange Money.",
   keywords:
     "loto, cameroun, jeu, loterie, loto 9, express, iziloto, mobile money, gains",
   authors: [{ name: "Dyce Gaming" }],
+  // ===========================
+  // 🖼️ FAVICON SVG
+  // ===========================
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
-    title: "LOTO 9 EXPRESS — Gagnez jusqu'à 1 000 000 F CFA",
+    title: "LOTO 9 EXPRESS0 — Gagnez jusqu'à 1 000 000 F CFA",
     description:
       "Simple, rapide, accessible. Jouez responsablement à partir de 100 F CFA.",
     type: "website",
@@ -40,12 +46,8 @@ export default function RootLayout({
     <html lang="fr" className={inter.variable}>
       <body className="antialiased min-h-screen flex flex-col font-sans">
         <Header />
-
         <main className="flex-grow">{children}</main>
-
         <Footer />
-
-        {/* Bouton flottant pour remonter en haut */}
         <ScrollToTop />
       </body>
     </html>

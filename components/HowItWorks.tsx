@@ -84,7 +84,7 @@ export default function HowItWorks() {
               className={`
                 relative bg-white rounded-2xl p-8
                 border ${step.borderColor}
-                hover:shadow-xl hover:-translate-y-2
+               
                 transition-all duration-300
                 group
               `}

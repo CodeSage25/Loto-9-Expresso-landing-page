@@ -40,7 +40,7 @@ const faqData = [
     id: 5,
     question: "Le jeu est-il légal au Cameroun ?",
     answer:
-      "Oui, absolument. IziLoto.cm est une plateforme de jeux en ligne opérée par Dyce Gaming, en conformité avec la réglementation camerounaise en vigueur. La plateforme est sécurisée et les transactions sont protégées. Nous promouvons le jeu responsable et interdisons l'accès aux mineurs de moins de 18 ans.",
+      "Oui, absolument. IziLoto.cm est une plateforme de jeux en ligne opérée par Dyce Gaming, en conformité avec la réglementation camerounaise en vigueur. La plateforme est sécurisée et les transactions sont protégées. Nous promouvons le jeu responsable et interdisons l'accès aux mineurs de moins de 21 ans.",
   },
 ];
 

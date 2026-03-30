@@ -114,7 +114,7 @@ export default function GagnantsContent() {
                           ? "border-gold shadow-xl shadow-gold/10"
                           : "border-gray-100 shadow-md"
                       }
-                      hover:shadow-xl hover:-translate-y-1
+                     hover:shadow-xl
                       transition-all duration-300
                     `}
                   >
