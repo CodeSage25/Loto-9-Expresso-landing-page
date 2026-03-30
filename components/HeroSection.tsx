@@ -147,7 +147,7 @@ export default function HeroSection() {
 
             {/* Sous-titre */}
             <p className="text-base md:text-xl text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow-md">
-              Simple, rapide, accessible. Jouez responsablement à partir de{" "}
+              Simple, rapide, accessible. Jouez responsable à partir de{" "}
               <strong className="text-white">100 F CFA</strong>.
             </p>
 

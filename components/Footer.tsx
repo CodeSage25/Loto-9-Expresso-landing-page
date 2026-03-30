@@ -149,7 +149,7 @@ export default function Footer() {
               © 2026. Tous droits réservés.
             </p>
             <p className="text-gray-600 text-xs text-center md:text-right">
-              Interdit aux moins de 21 ans • Jouez responsablement
+              Interdit aux moins de 21 ans • Jouez responsable
             </p>
           </div>
         </div>

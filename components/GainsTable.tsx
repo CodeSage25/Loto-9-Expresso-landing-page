@@ -89,7 +89,7 @@ export default function GainsTable() {
         >
           <h2 className="section-title">Tableau des gains</h2>
           <p className="section-subtitle">
-            Plus vous trouvez de numéros dans le bon ordre, plus vous gagnez !
+            Plus vous trouvez de numéros dans l'ordre, plus vous gagnez !
           </p>
         </motion.div>
 

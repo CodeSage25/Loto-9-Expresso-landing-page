@@ -37,7 +37,7 @@ const steps = [
     icon: Trophy,
     title: "Gagnez si l'ordre correspond",
     description:
-      "Plus vous trouvez de numéros dans le bon ordre, plus vos gains sont élevés. Jusqu'à 1 000 000 F CFA !",
+      "Plus vous trouvez de numéros dans l'ordre, plus vos gains sont élevés. Jusqu'à 1 000 000 F CFA",
     overlayColor: "absolute inset-0 bg-black/60",
 
     iconBg: "bg-white/20",
