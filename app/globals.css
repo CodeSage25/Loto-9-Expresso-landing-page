@@ -13,9 +13,9 @@
    Crée automatiquement les classes : bg-primary, text-gold, etc.
 */
 @theme {
-  --color-primary: #1a237e;
-  --color-primary-light: #283593;
-  --color-primary-dark: #0d1453;
+  --color-primary: #302683;
+  --color-primary-light: #302683;
+  --color-primary-dark: #302683;
 
   --color-gold: #f9a825;
   --color-gold-light: #fdd835;
