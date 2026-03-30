@@ -73,7 +73,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Disponible exclusivement au Cameroun sur{" "}
+              Disponible sur{" "}
               <Link
                 href="https://iziloto.cm/"
                 target="_blank"
@@ -82,10 +82,6 @@ export default function Footer() {
               >
                 iziloto.cm
               </Link>
-            </p>
-            <p className="text-gray-500 text-sm">
-              Un jeu de la société{" "}
-              <span className="text-gray-300 font-semibold">Dyce Gaming</span>
             </p>
           </div>
 
@@ -123,30 +119,6 @@ export default function Footer() {
               Contact
             </h4>
 
-            <a
-              href="tel:+237688332304"
-              className={`
-                flex items-center gap-3 text-gray-400
-                hover:text-gold transition-colors duration-200
-                mb-4 text-sm
-              `}
-            >
-              <Phone size={16} className="flex-shrink-0" />
-              +237 688 33 23 04
-            </a>
-
-            <a
-              href="mailto:info@dyce.net"
-              className={`
-                flex items-center gap-3 text-gray-400
-                hover:text-gold transition-colors duration-200
-                mb-6 text-sm
-              `}
-            >
-              <Mail size={16} className="flex-shrink-0" />
-              info@dyce.net
-            </a>
-
             <Link
               href="https://www.facebook.com/people/IziLotocm/61585217354848/"
               target="_blank"
@@ -174,7 +146,7 @@ export default function Footer() {
         <div className="section-container py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-xs text-center md:text-left">
-              © 2026 Dyce Gaming. Tous droits réservés.
+              © 2026. Tous droits réservés.
             </p>
             <p className="text-gray-600 text-xs text-center md:text-right">
               Interdit aux moins de 21 ans • Jouez responsablement
