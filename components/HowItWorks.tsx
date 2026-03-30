@@ -8,16 +8,18 @@ import { Target, Coins, Trophy } from "lucide-react";
 // ===========================
 // 📋 DONNÉES DES 3 ÉTAPES
 // ===========================
-// On sépare les données du rendu pour faciliter la maintenance.
-// Chaque étape a une icône, un titre et une description.
+// overlayColor : couleur semi-transparente par-dessus l'image de fond
+// Chaque carte a sa propre teinte pour les différencier
 const steps = [
   {
     icon: Target,
     title: "Choisissez vos 9 numéros",
     description:
       "Sélectionnez 9 numéros parmi les options disponibles. Faites confiance à votre instinct !",
-    color: "bg-blue-50 text-blue-600",
-    borderColor: "border-blue-200",
+    overlayColor: "absolute inset-0 bg-black/60",
+
+    iconBg: "bg-white/20",
+    iconColor: "text-blue-200",
     step: "01",
   },
   {
@@ -25,8 +27,10 @@ const steps = [
     title: "Misez à partir de 100 F CFA",
     description:
       "Un jeu accessible à tous. Déposez via MTN Mobile Money ou Orange Money en quelques secondes.",
-    color: "bg-gold/10 text-gold-dark",
-    borderColor: "border-gold/30",
+    overlayColor: "absolute inset-0 bg-black/60",
+
+    iconBg: "bg-gold/20",
+    iconColor: "text-gold",
     step: "02",
   },
   {
@@ -34,8 +38,10 @@ const steps = [
     title: "Gagnez si l'ordre correspond",
     description:
       "Plus vous trouvez de numéros dans le bon ordre, plus vos gains sont élevés. Jusqu'à 1 000 000 F CFA !",
-    color: "bg-green-50 text-green-600",
-    borderColor: "border-green-200",
+    overlayColor: "absolute inset-0 bg-black/60",
+
+    iconBg: "bg-white/20",
+    iconColor: "text-green-300",
     step: "03",
   },
 ];
@@ -46,12 +52,6 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="comment-jouer" className="py-20 bg-gray-50">
-      {/*
-        id="comment-jouer" : ancre pour le menu de navigation
-        py-20 : padding vertical généreux
-        bg-gray-50 : fond gris très léger pour contraster avec le hero
-      */}
-
       <div className="section-container">
         {/* Titre + sous-titre */}
         <motion.div
@@ -68,62 +68,90 @@ export default function HowItWorks() {
 
         {/* ===========================
             📦 GRILLE DES 3 CARTES
-            ===========================
-            grid-cols-1 : 1 colonne sur mobile
-            md:grid-cols-3 : 3 colonnes à partir de 768px
-        */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            =========================== */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={step.step}
-              // Animation : apparaît en montant, avec un délai croissant
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className={`
-                relative bg-white rounded-2xl p-8
-                border ${step.borderColor}
-               
+                relative overflow-hidden rounded-2xl
+                min-h-[280px]
+                shadow-lg hover:shadow-2xl
                 transition-all duration-300
                 group
               `}
             >
-              {/*
-                group : permet de cibler les enfants au hover
-                hover:-translate-y-2 : la carte monte légèrement au survol
-                hover:shadow-xl : ombre plus marquée au survol
+              {/* ===========================
+                  🖼️ IMAGE DE FOND
+                  ===========================
+                  Même image sur les 3 cartes.
+                  Chaque carte a un overlay de couleur différente.
               */}
+              <div
+                className="absolute inset-0 w-full h-full"
+                style={{
+                  backgroundImage:
+                    "url('/images/Logo_Fonds_Loto9_Expresso.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
 
-              {/* Numéro d'étape en arrière-plan */}
-              <span className="absolute top-4 right-4 text-6xl font-black text-gray-100 select-none">
-                {step.step}
-              </span>
-
-              {/* Icône dans un cercle coloré */}
+              {/* ===========================
+                  🌑 OVERLAY COLORÉ
+                  ===========================
+                  Couche colorée semi-transparente par-dessus l'image.
+                  - Donne sa couleur distinctive à chaque carte
+                  - S'éclaircit légèrement au hover (group-hover)
+              */}
               <div
                 className={`
-                  w-14 h-14 rounded-xl ${step.color}
-                  flex items-center justify-center mb-5
-                  group-hover:scale-110 transition-transform duration-300
+                  absolute inset-0
+                  ${step.overlayColor}
+                
+                  transition-all duration-500
                 `}
-              >
-                {/* 
-                  step.icon est un composant Lucide React.
-                  On l'utilise comme <step.icon /> grâce à JSX.
-                */}
-                <step.icon size={28} />
+              />
+
+              {/* ===========================
+                  📦 CONTENU DE LA CARTE
+                  ===========================
+                  z-10 : par-dessus l'image et l'overlay
+              */}
+              <div className="relative z-10 p-8 h-full flex flex-col">
+                {/* Numéro d'étape en arrière-plan */}
+                <span className="absolute top-4 right-4 text-6xl font-black text-white/10 select-none">
+                  {step.step}
+                </span>
+
+                {/* Icône dans un cercle */}
+                <div
+                  className={`
+                    w-14 h-14 rounded-xl
+                    ${step.iconBg}
+                    backdrop-blur-sm
+                    flex items-center justify-center mb-5
+                    group-hover:scale-110 transition-transform duration-300
+                  `}
+                >
+                  <step.icon size={28} className={step.iconColor} />
+                </div>
+
+                {/* Titre de l'étape */}
+                <h3 className="text-xl font-bold text-white mb-3 drop-shadow-md">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-white/80 leading-relaxed text-sm drop-shadow-sm">
+                  {step.description}
+                </p>
               </div>
-
-              {/* Titre de l'étape */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {step.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-600 leading-relaxed">
-                {step.description}
-              </p>
             </motion.div>
           ))}
         </div>

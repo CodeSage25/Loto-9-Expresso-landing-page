@@ -65,12 +65,53 @@ const ballColors = [
 // ===========================
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light min-h-[500px] md:min-h-[600px] flex items-center">
-      {/* Décos arrière-plan */}
+    <section className="relative overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center">
+      {/*
+        - relative : pour positionner l'image de fond et l'overlay
+        - overflow-hidden : cache tout ce qui dépasse
+        - Plus de bg-gradient : remplacé par l'image ci-dessous
+      */}
+
+      {/* ===========================
+          🖼️ IMAGE DE FOND
+          ===========================
+          Position absolute pour couvrir toute la section.
+          object-cover : l'image remplit tout sans déformation.
+          object-center : centrée dans son conteneur.
+      */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: "url('/images/Logo_Fonds_Loto9_Expresso.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+
+      {/* ===========================
+          🌑 OVERLAY SOMBRE
+          ===========================
+          Couche semi-transparente par-dessus l'image
+          pour que le texte blanc reste lisible.
+          Ajuste l'opacité : bg-black/60 = 60% noir.
+          - Plus le chiffre est grand, plus c'est sombre
+          - /50 = léger, /60 = moyen, /70 = sombre
+      */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* ===========================
+          ✨ ÉLÉMENTS DÉCORATIFS (par-dessus l'overlay)
+          =========================== */}
       <div className="absolute top-10 right-10 w-48 md:w-72 h-48 md:h-72 bg-gold/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 left-10 w-64 md:w-96 h-64 md:h-96 bg-gold/5 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/3 w-40 md:w-64 h-40 md:h-64 bg-blue-400/10 rounded-full blur-3xl" />
 
+      {/* ===========================
+          📦 CONTENU PRINCIPAL (par-dessus tout)
+          ===========================
+          z-10 : s'assure que le contenu est AU-DESSUS
+          de l'image et de l'overlay
+      */}
       <div className="section-container relative z-10 py-12 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* ===========================
@@ -83,14 +124,18 @@ export default function HeroSection() {
             className="text-center lg:text-left"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-gold/20 text-gold-light px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 bg-gold/20 text-gold-light px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
               Tirage toutes les 2 minutes
             </div>
 
-            {/* Titre H1 — tailles responsive */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-              LOTO 9 EXPRESS0 :
+            {/* Titre H1 */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-lg">
+              {/*
+                drop-shadow-lg : ajoute une ombre au texte
+                pour qu'il ressorte bien sur l'image de fond
+              */}
+              LOTO 9 EXPRESSO:
               <br />
               <span className="text-gradient-gold">
                 Gagnez jusqu&apos;à
@@ -101,17 +146,14 @@ export default function HeroSection() {
             </h1>
 
             {/* Sous-titre */}
-            <p className="text-base md:text-xl text-blue-200 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-base md:text-xl text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow-md">
               Simple, rapide, accessible. Jouez responsablement à partir de{" "}
               <strong className="text-white">100 F CFA</strong>.
             </p>
 
             {/* ===========================
                 🎱 BOULES VERSION MOBILE
-                ===========================
-                Visibles uniquement sur mobile/tablette (lg:hidden)
-                Disposition horizontale compacte
-            */}
+                =========================== */}
             <div className="flex justify-center gap-2 mb-8 lg:hidden flex-wrap">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num, index) => (
                 <LotoBall
@@ -132,22 +174,19 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="btn-cta animate-glow text-center text-base md:text-lg"
               >
-                JOUER MAINTENANT
+                JOUER MAINTENANT SUR IZILOTO.CM
               </Link>
             </div>
 
             {/* Réassurance */}
-            <p className="mt-4 text-sm text-blue-300/70 text-center lg:text-left">
+            <p className="mt-4 text-sm text-gray-300/70 text-center lg:text-left drop-shadow-sm">
               🔒 Plateforme sécurisée • Paiement Mobile Money
             </p>
           </motion.div>
 
           {/* ===========================
               🎱 BOULES VERSION DESKTOP
-              ===========================
-              Visibles uniquement sur desktop (hidden lg:flex)
-              Grille 3x3 avec grosses boules
-          */}
+              =========================== */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

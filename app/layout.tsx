@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LOTO 9 EXPRESS0 — Gagnez jusqu'à 1 000 000 F CFA | IziLoto.cm",
+  title: "Loto 9 EXPRESS0 — Gagnez jusqu'à 1 000 000 F CFA | IziLoto.cm",
   description:
-    "Jouez au LOTO 9 EXPRESS0 sur IziLoto.cm. Choisissez 9 numéros, misez à partir de 100 F CFA et gagnez jusqu'à 1 000 000 F CFA toutes les 2 minutes. Disponible au Cameroun via MTN Mobile Money et Orange Money.",
+    "Jouez au Loto 9 EXPRESS0 sur IziLoto.cm. Choisissez 9 numéros, misez à partir de 100 F CFA et gagnez jusqu'à 1 000 000 F CFA toutes les 2 minutes. Disponible au Cameroun via MTN Mobile Money et Orange Money.",
   keywords:
     "loto, cameroun, jeu, loterie, loto 9, express, iziloto, mobile money, gains",
   authors: [{ name: "Dyce Gaming" }],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "LOTO 9 EXPRESS0 — Gagnez jusqu'à 1 000 000 F CFA",
+    title: "Loto 9 EXPRESS0 — Gagnez jusqu'à 1 000 000 F CFA",
     description:
       "Simple, rapide, accessible. Jouez responsablement à partir de 100 F CFA.",
     type: "website",
