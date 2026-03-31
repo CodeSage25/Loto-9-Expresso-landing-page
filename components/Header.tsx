@@ -9,11 +9,7 @@ import { Menu, X } from "lucide-react";
 
 // ===========================
 // 📋 DONNÉES DU MENU
-// ===========================
-// Deux types de liens :
-// - href commençant par "#" : ancre sur la page d'accueil (scroll)
-// - href commençant par "/" : navigation vers une autre page
-// - isPage : indique que c'est une page séparée (pas une ancre)
+
 const navLinks = [
   { label: "Accueil", href: "/", isPage: true },
   { label: "Comment Jouer", href: "/#comment-jouer", isPage: false },
@@ -44,7 +40,7 @@ export default function Header() {
               =========================== */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/Logo_Loto9_Expresso.png"
+              src="/images/Logo_Loto_Expresso.png"
               alt="Logo Loto 9 Express"
               width={160}
               height={50}
@@ -77,7 +73,6 @@ export default function Header() {
                   {link.label}
                 </Link>
               ) : (
-                // Lien ancre → utilise <a> classique pour le scroll
                 <a
                   key={link.label}
                   href={link.href}

@@ -1,17 +1,5 @@
-/* ===========================
-   📦 IMPORT TAILWIND CSS v4
-   ===========================
-   DOIT être la première ligne.
-   Charge tout : base, components, utilities.
-*/
 @import "tailwindcss";
 
-/* ===========================
-   🎨 THÈME PERSONNALISÉ
-   ===========================
-   Définit nos couleurs, polices, animations.
-   Crée automatiquement les classes : bg-primary, text-gold, etc.
-*/
 @theme {
   --color-primary: #302683;
   --color-primary-light: #302683;

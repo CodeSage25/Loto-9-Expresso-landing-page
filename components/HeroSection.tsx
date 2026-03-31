@@ -66,52 +66,37 @@ const ballColors = [
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center">
-      {/*
-        - relative : pour positionner l'image de fond et l'overlay
-        - overflow-hidden : cache tout ce qui dépasse
-        - Plus de bg-gradient : remplacé par l'image ci-dessous
-      */}
-
       {/* ===========================
-          🖼️ IMAGE DE FOND
-          ===========================
-          Position absolute pour couvrir toute la section.
-          object-cover : l'image remplit tout sans déformation.
-          object-center : centrée dans son conteneur.
-      */}
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: "url('/images/Logo_Fonds_Loto9_Expresso.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
-
-      {/* ===========================
-          🌑 OVERLAY SOMBRE
-          ===========================
-          Couche semi-transparente par-dessus l'image
-          pour que le texte blanc reste lisible.
-          Ajuste l'opacité : bg-black/60 = 60% noir.
-          - Plus le chiffre est grand, plus c'est sombre
-          - /50 = léger, /60 = moyen, /70 = sombre
-      */}
-      <div className="absolute inset-0 bg-black/60" />
-
-      {/* ===========================
-          ✨ ÉLÉMENTS DÉCORATIFS (par-dessus l'overlay)
+          🖼️ FOND AVEC ROTATION CONTINUE
           =========================== */}
-      <div className="absolute top-10 right-10 w-48 md:w-72 h-48 md:h-72 bg-gold/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-64 md:w-96 h-64 md:h-96 bg-gold/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        <div
+          className="w-[200%] h-[200%] animate-spin"
+          style={{
+            animationDuration: "80s",
+            animationTimingFunction: "linear",
+            animationIterationCount: "infinite",
+            backgroundImage: "url('/images/Logo_Fonds_Loto9_Expresso.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </div>
 
       {/* ===========================
-          📦 CONTENU PRINCIPAL (par-dessus tout)
-          ===========================
-          z-10 : s'assure que le contenu est AU-DESSUS
-          de l'image et de l'overlay
-      */}
+          🔲 OVERLAY SOMBRE
+          =========================== */}
+      <div className="absolute inset-0 z-[1] bg-black/60" />
+
+      {/* ===========================
+          ✨ ÉLÉMENTS DÉCORATIFS
+          =========================== */}
+      <div className="absolute top-10 right-10 z-[2] w-48 md:w-72 h-48 md:h-72 bg-gold/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 z-[2] w-64 md:w-96 h-64 md:h-96 bg-gold/5 rounded-full blur-3xl" />
+
+      {/* ===========================
+          📦 CONTENU PRINCIPAL
+          =========================== */}
       <div className="section-container relative z-10 py-12 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* ===========================
@@ -131,10 +116,6 @@ export default function HeroSection() {
 
             {/* Titre H1 */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-lg">
-              {/*
-                drop-shadow-lg : ajoute une ombre au texte
-                pour qu'il ressorte bien sur l'image de fond
-              */}
               LOTO 9 EXPRESSO:
               <br />
               <span className="text-gradient-gold">

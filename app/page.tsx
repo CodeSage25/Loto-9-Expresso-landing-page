@@ -3,6 +3,7 @@
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
 import GainsTable from "@/components/GainsTable";
+import LotoBonus from "@/components/LotoBonus";
 import PaymentMethods from "@/components/PaymentMethods";
 import FAQ from "@/components/FAQ";
 import ResponsibleGaming from "@/components/ResponsibleGaming";
@@ -19,7 +20,7 @@ export default function Home() {
 
       {/* 💰 Tableau des gains (7 niveaux + Jackpot) */}
       <GainsTable />
-
+      <LotoBonus />
       {/* 💳 MTN Mobile Money + Orange Money */}
       <PaymentMethods />
 

@@ -6,10 +6,6 @@ import { motion } from "framer-motion";
 import { Star, Crown, TrendingUp, Zap } from "lucide-react";
 import Link from "next/link";
 
-// ===========================
-// 📋 DONNÉES DES GAINS (sans le Jackpot)
-// ===========================
-// Le Jackpot est traité séparément pour un rendu spécial.
 const regularGains = [
   {
     numbers: 3,

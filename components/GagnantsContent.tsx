@@ -27,7 +27,7 @@ import Image from "next/image";
 interface Winner {
   id: number;
   date: string;
-  ticketImage: string; // Chemin vers l'image du ticket dans /public/images/
+  ticketImage: string;
   description: string;
   gain: string;
   numbersFound: number;

@@ -7,9 +7,7 @@ import { Target, Coins, Trophy } from "lucide-react";
 
 // ===========================
 // 📋 DONNÉES DES 3 ÉTAPES
-// ===========================
-// overlayColor : couleur semi-transparente par-dessus l'image de fond
-// Chaque carte a sa propre teinte pour les différencier
+
 const steps = [
   {
     icon: Target,
@@ -85,12 +83,6 @@ export default function HowItWorks() {
                 group
               `}
             >
-              {/* ===========================
-                  🖼️ IMAGE DE FOND
-                  ===========================
-                  Même image sur les 3 cartes.
-                  Chaque carte a un overlay de couleur différente.
-              */}
               <div
                 className="absolute inset-0 w-full h-full"
                 style={{
@@ -102,13 +94,6 @@ export default function HowItWorks() {
                 }}
               />
 
-              {/* ===========================
-                  🌑 OVERLAY COLORÉ
-                  ===========================
-                  Couche colorée semi-transparente par-dessus l'image.
-                  - Donne sa couleur distinctive à chaque carte
-                  - S'éclaircit légèrement au hover (group-hover)
-              */}
               <div
                 className={`
                   absolute inset-0
@@ -118,11 +103,6 @@ export default function HowItWorks() {
                 `}
               />
 
-              {/* ===========================
-                  📦 CONTENU DE LA CARTE
-                  ===========================
-                  z-10 : par-dessus l'image et l'overlay
-              */}
               <div className="relative z-10 p-8 h-full flex flex-col">
                 {/* Numéro d'étape en arrière-plan */}
                 <span className="absolute top-4 right-4 text-6xl font-black text-white/10 select-none">

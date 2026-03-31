@@ -23,12 +23,6 @@ export default function ResponsibleGaming() {
             text-white
           `}
         >
-          {/*
-            justify-center : tout est centré horizontalement
-            items-center : aligné verticalement
-            Un seul bloc avec icône + texte
-          */}
-
           {/* Icône d'alerte dans un cercle */}
           <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
             <AlertTriangle size={24} className="text-white" />
