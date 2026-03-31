@@ -212,6 +212,10 @@ export default function GainsTable() {
               Tenter ma chance →
             </Link>
           </div>
+          {/* ✳️ Mention légale — bas droite */}
+          <span className="absolute bottom-2 right-4 z-20 text-[10px] sm:text-xs text-brand-blue-dark/50 italic font-normal">
+            * À partager entre tous les gagnants du jackpot
+          </span>
         </motion.div>
 
         {/* Texte informatif */}
