@@ -19,7 +19,7 @@ const regularGains = [
   },
   {
     numbers: 4,
-    multiplier: "x5",
+    multiplier: "x3",
     level: 2,
     color: "from-indigo-50 to-indigo-100",
     textColor: "text-indigo-700",
@@ -29,7 +29,7 @@ const regularGains = [
   },
   {
     numbers: 5,
-    multiplier: "x50",
+    multiplier: "x10",
     level: 3,
     color: "from-violet-50 to-violet-100",
     textColor: "text-violet-700",
@@ -39,7 +39,7 @@ const regularGains = [
   },
   {
     numbers: 6,
-    multiplier: "x100",
+    multiplier: "x40",
     level: 4,
     color: "from-purple-50 to-purple-100",
     textColor: "text-purple-700",
@@ -49,7 +49,7 @@ const regularGains = [
   },
   {
     numbers: 7,
-    multiplier: "x500",
+    multiplier: "x200",
     level: 5,
     color: "from-primary/10 to-primary/20",
     textColor: "text-primary",
@@ -59,7 +59,7 @@ const regularGains = [
   },
   {
     numbers: 8,
-    multiplier: "x5 000",
+    multiplier: "x1 000",
     level: 6,
     color: "from-primary to-primary-light",
     textColor: "text-white",
