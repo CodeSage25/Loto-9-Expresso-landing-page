@@ -3,7 +3,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Calendar, Ticket, Award, ArrowLeft } from "lucide-react";
+import { Calendar, Ticket, Award } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 

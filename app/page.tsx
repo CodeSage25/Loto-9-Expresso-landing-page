@@ -12,25 +12,19 @@ import FollowUs from "@/components/FollowUs";
 export default function Home() {
   return (
     <>
-      {/* 🎯 Accroche principale avec boules de loto */}
       <HeroSection />
 
-      {/* 📋 Les 3 étapes pour jouer */}
       <HowItWorks />
 
-      {/* 💰 Tableau des gains (7 niveaux + Jackpot) */}
       <GainsTable />
       <LotoBonus />
-      {/* 💳 MTN Mobile Money + Orange Money */}
+
       <PaymentMethods />
 
-      {/* ❓ Questions fréquentes (accordéon) */}
       <FAQ />
 
-      {/* ⚠️ Bandeau d'avertissement jeu responsable */}
       <ResponsibleGaming />
 
-      {/* 📱 Lien vers la page Facebook */}
       <FollowUs />
     </>
   );

@@ -63,7 +63,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/images/Logo_Loto9_Expresso.png"
+                src="/images/Logo_Loto_Expresso.png"
                 alt="Logo Loto 9 Express"
                 width={180}
                 height={55}
